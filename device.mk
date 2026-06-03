@@ -540,3 +540,10 @@ $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
 
 #Miui
 $(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
+
+#Dolby
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+ifeq ($(TARGET_INCLUDE_DOLBY),true)
+    PRODUCT_COPY_FILES += \
+        $(DEVICE_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+endif

@@ -250,6 +250,12 @@
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
                 <route type="mix" sink="fast input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
+                <route type="mix" sink="Speaker" 
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+                <route type="mix" sink="Wired Headset" 
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+                <route type="mix" sink="Wired Headphones" 
+                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
             </routes>
 
         </module>
@@ -272,5 +278,13 @@
     <xi:include href="default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
+
+    <!-- Spatial Audio -->
+
+    <mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
+        <profile name="" format="AUDIO_FORMAT_PCM_FLOAT" samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+    </mixPort>
+
+    <!-- End of Spatial Audio -->
 
 </audioPolicyConfiguration>
