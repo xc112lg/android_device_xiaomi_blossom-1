@@ -497,7 +497,7 @@ PRODUCT_COPY_FILES += \
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
-    remove_packages
+    RemovePackagesBlossom
 
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
