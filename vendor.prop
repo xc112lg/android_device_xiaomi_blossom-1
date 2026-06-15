@@ -272,3 +272,4 @@ zygote.critical_window.minute=10
 import /vendor/etc/properties/${ro.boot.hwname}.prop
 #Disable SharedCon
 persist.vendor.wifi.dialog.disabled=1
+persist.log.tag.AAL=S
