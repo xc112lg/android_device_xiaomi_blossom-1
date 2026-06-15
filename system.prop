@@ -92,3 +92,6 @@ ro.mist.front=5MP
 ro.mist.platform=Blossom
 ro.mist.screen=Amoled 4K Utra HDR
 ro.mist.device.name=Xiaomi Blossom
+
+#Disable SharedCon
+ro.wifi.hotspot2_disabled=1

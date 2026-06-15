@@ -270,3 +270,5 @@ zygote.critical_window.minute=10
 
 # Device specific properties
 import /vendor/etc/properties/${ro.boot.hwname}.prop
+#Disable SharedCon
+persist.vendor.wifi.dialog.disabled=1
