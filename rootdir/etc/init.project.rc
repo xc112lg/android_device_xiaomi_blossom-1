@@ -43,3 +43,6 @@ on property:sys.boot_completed=1
     mkdir /sys/kernel/tracing/instances/mmstat 711
     write /sys/kernel/tracing/instances/mmstat/tracing_on 0
     write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 0
+    # Mark device as provisioned to stop SetupWizard partner provider spam
+    settings put secure user_setup_complete 1
+    settings put global device_provisioned 1
