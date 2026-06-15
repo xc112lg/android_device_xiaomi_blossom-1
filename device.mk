@@ -554,3 +554,7 @@ ifeq ($(TARGET_INCLUDE_DOLBY),true)
     PRODUCT_COPY_FILES += \
         $(DEVICE_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 endif
+
+#Disable Share Connectivity
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.settings.global.shared_connectivity_enabled=0
