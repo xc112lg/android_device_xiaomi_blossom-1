@@ -536,6 +536,7 @@ PRODUCT_PACKAGES += \
     WifiResOverlayBlossom
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sysconfig/sku_dandelion/disable-nfc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/sku_dandelion/disable-nfc.xml \
     $(LOCAL_PATH)/configs/sysconfig/sku_angelica/disable-nfc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/sku_angelica/disable-nfc.xml \
     $(LOCAL_PATH)/configs/sysconfig/sku_angelicain/disable-nfc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/sku_angelicain/disable-nfc.xml \
     $(LOCAL_PATH)/configs/sysconfig/sku_cattail/disable-nfc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/sku_cattail/disable-nfc.xml
