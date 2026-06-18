@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <disabled-in-sku package="com.android.nfc" />
+    <disabled-in-sku package="com.android.se" />
+    <disabled-in-sku package="com.android.apps.tag" />
+    <disabled-in-sku package="com.google.android.tag" />
+</config>
