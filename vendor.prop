@@ -1,5 +1,5 @@
 # AAL
-ro.vendor.mtk_aal_support=1
+ro.vendor.mtk_aal_support=0
 persist.vendor.sys.mtkaal.function=0
 
 # AEE
@@ -270,3 +270,4 @@ zygote.critical_window.minute=10
 
 # Device specific properties
 import /vendor/etc/properties/${ro.boot.hwname}.prop
+persist.log.tag.AAL=S

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- 
+        Override application_hidden_policy_exempt_apps to remove com.android.nfc
+        This RRO overlay replaces the framework's policy_exempt_apps.xml definition
+        with a version that excludes NFC from the exempt apps list.
+        
+        Original framework location:
+        frameworks/base/core/res/res/values/policy_exempt_apps.xml
+    -->
+    <string-array translatable="false" name="application_hidden_policy_exempt_apps">
+        <item>com.android.settings</item>
+        <item>com.android.providers.settings</item>
+    </string-array>
+</resources>
