@@ -95,6 +95,13 @@ cc_prebuilt_binary {
         "DeviceIntelligenceNetworkPrebuiltAstrea",
         "CustomizationBundlePrebuiltFullVersion",
         "WallpaperPickerGoogleRelease",
+        "MaestroPrebuilt",
+        "PartnerSetupPrebuilt",
+        "SoundPickerPrebuilt_33000242",
+        "ModuleMetadataGoogle",
+        "TagGoogle",
+        "CalculatorGooglePrebuilt_85006267",
+        "PrebuiltDeskClockGoogle_76008261",
 
 
 
