@@ -87,8 +87,13 @@ cc_prebuilt_binary {
         "DreamlinerPrebuilt_22000020",
         "DreamlinerUpdater",
         "PrebuiltBugle",
-        "CalculatorGooglePrebuilt",
-        "PrebuiltDeskClockGoogle",
+        "Flipendo",
+        "AvatarPickerGoogle",
+        "MoseyApp",
+        "DeviceIntelligenceNetworkPrebuiltAstrea",
+        "CustomizationBundlePrebuiltFullVersion",
+        "WallpaperPickerGoogleRelease",
+
 
 
     ],
