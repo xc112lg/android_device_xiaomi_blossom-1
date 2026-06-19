@@ -85,6 +85,8 @@ cc_prebuilt_binary {
         "PixelThemesStub2026_midyear",
         "DreamlinerDreamsPrebuilt_100894",
         "DreamlinerPrebuilt_22000020",
+        "DreamlinerDreamsPrebuilt",
+        "DreamlinerPrebuilt",
         "DreamlinerUpdater",
         "PrebuiltBugle",
         "Flipendo",
