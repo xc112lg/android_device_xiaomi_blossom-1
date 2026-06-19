@@ -87,6 +87,8 @@ cc_prebuilt_binary {
         "DreamlinerPrebuilt_22000020",
         "DreamlinerUpdater",
         "PrebuiltBugle",
+        "CalculatorGooglePrebuilt",
+        "PrebuiltDeskClockGoogle",
 
 
     ],
