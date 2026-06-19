@@ -86,6 +86,8 @@ cc_prebuilt_binary {
         "DreamlinerDreamsPrebuilt_100894",
         "DreamlinerPrebuilt_22000020",
         "DreamlinerUpdater",
+        "PrebuiltBugle",
+
 
     ],
     strip: {
