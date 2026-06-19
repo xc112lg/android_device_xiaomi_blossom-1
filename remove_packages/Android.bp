@@ -102,6 +102,8 @@ cc_prebuilt_binary {
         "TagGoogle",
         "CalculatorGooglePrebuilt_85006267",
         "PrebuiltDeskClockGoogle_76008261",
+        "GoogleDialer",
+        "GoogleContacts",
 
 
 
