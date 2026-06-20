@@ -97,7 +97,7 @@ cc_prebuilt_binary {
         "CalculatorGooglePrebuilt_85006267",
         "PrebuiltDeskClockGoogle_76008261",
         "GoogleDialer",
-//        "GoogleContacts",
+        "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
  //     "LatinIMEGooglePrebuilt",
         "TagGoogle",
@@ -110,6 +110,8 @@ cc_prebuilt_binary {
  "CustomizationBundlePrebuiltFullVersion",   // Customization framework - KEEP
 "TrichromeLibrary-Stub",             // Chromium base - KEEP
 "Accord",
+"PixelSetupWizard",
+
     ],
     strip: {
         none: true,
