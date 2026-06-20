@@ -105,6 +105,7 @@ cc_prebuilt_binary {
         "GoogleDialer",
         "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
+        "LatinIMEGooglePrebuilt",
 
 
 
