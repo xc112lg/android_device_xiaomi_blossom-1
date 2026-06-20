@@ -106,6 +106,7 @@ cc_prebuilt_binary {
         "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
         "LatinIMEGooglePrebuilt",
+        "TrichromeLibrary-Stub",
 
 
 
