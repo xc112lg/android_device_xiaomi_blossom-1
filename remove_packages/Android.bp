@@ -96,10 +96,10 @@ cc_prebuilt_binary {
         "PartnerSetupPrebuilt",
         "CalculatorGooglePrebuilt_85006267",
         "PrebuiltDeskClockGoogle_76008261",
-        "GoogleDialer",
-        "GoogleContacts",
+//        "GoogleDialer",
+//        "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
-        "LatinIMEGooglePrebuilt",
+ //     "LatinIMEGooglePrebuilt",
         "TagGoogle",
 
 // KEEP THESE - GMS CRITICAL
