@@ -34,7 +34,6 @@ cc_prebuilt_binary {
         "MyVerizonServices",
         "OBDM_Permissions",
         "obdm_stub",
-        "OdadPrebuilt",
         "OemDmTrigger",
         "OmniJaws",
         "OPScreenRecord",
@@ -73,7 +72,7 @@ cc_prebuilt_binary {
         "BluetoothMidiService",
         "CallLogBackup",
         "PhotoTable",
-// from gms
+// from gms - safe to remove
         "talkback",
         "LocationHistoryPrebuilt",
         "MarkupGoogle_v2",
@@ -92,23 +91,24 @@ cc_prebuilt_binary {
         "Flipendo",
         "AvatarPickerGoogle",
         "MoseyApp",
-        "DeviceIntelligenceNetworkPrebuiltAstrea",
-        "CustomizationBundlePrebuiltFullVersion",
         "WallpaperPickerGoogleRelease",
         "MaestroPrebuilt",
         "PartnerSetupPrebuilt",
-        "SoundPickerPrebuilt_33000242",
-        "ModuleMetadataGoogle",
-        "TagGoogle",
         "CalculatorGooglePrebuilt_85006267",
         "PrebuiltDeskClockGoogle_76008261",
         "GoogleDialer",
         "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
         "LatinIMEGooglePrebuilt",
-        "TrichromeLibrary-Stub",
+        "TagGoogle",
 
-
+// KEEP THESE - GMS CRITICAL
+// "ModuleMetadataGoogle",              // GMS module metadata - KEEP
+// "OdadPrebuilt",                      // Device policies - KEEP
+// "DeviceIntelligenceNetworkPrebuiltAstrea",  // Network intelligence - KEEP
+// "SoundPickerPrebuilt_33000242",      // GMS sound picker - KEEP
+// "CustomizationBundlePrebuiltFullVersion",   // Customization framework - KEEP
+// "TrichromeLibrary-Stub",             // Chromium base - KEEP
 
     ],
     strip: {
