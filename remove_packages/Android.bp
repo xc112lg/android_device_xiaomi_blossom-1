@@ -109,7 +109,7 @@ cc_prebuilt_binary {
  "SoundPickerPrebuilt_33000242",      // GMS sound picker - KEEP
  "CustomizationBundlePrebuiltFullVersion",   // Customization framework - KEEP
 "TrichromeLibrary-Stub",             // Chromium base - KEEP
-
+"Accord",
     ],
     strip: {
         none: true,
