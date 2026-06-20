@@ -96,7 +96,7 @@ cc_prebuilt_binary {
         "PartnerSetupPrebuilt",
         "CalculatorGooglePrebuilt_85006267",
         "PrebuiltDeskClockGoogle_76008261",
-//        "GoogleDialer",
+        "GoogleDialer",
 //        "GoogleContacts",
         "GoogleRestorePrebuilt-v908838",
  //     "LatinIMEGooglePrebuilt",
