@@ -108,7 +108,7 @@ cc_prebuilt_binary {
  "DeviceIntelligenceNetworkPrebuiltAstrea",  // Network intelligence - KEEP
  "SoundPickerPrebuilt_33000242",      // GMS sound picker - KEEP
  "CustomizationBundlePrebuiltFullVersion",   // Customization framework - KEEP
-"TrichromeLibrary-Stub",             // Chromium base - KEEP
+// "TrichromeLibrary-Stub",             // Chromium base - KEEP
 "Accord",
 "PixelSetupWizard",
 
