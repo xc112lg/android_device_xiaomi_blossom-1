@@ -103,8 +103,8 @@ cc_prebuilt_binary {
         "TagGoogle",
 
 // KEEP THESE - GMS CRITICAL
-// "ModuleMetadataGoogle",              // GMS module metadata - KEEP
-// "OdadPrebuilt",                      // Device policies - KEEP
+ "ModuleMetadataGoogle",              // GMS module metadata - KEEP
+ "OdadPrebuilt",                      // Device policies - KEEP
  "DeviceIntelligenceNetworkPrebuiltAstrea",  // Network intelligence - KEEP
  "SoundPickerPrebuilt_33000242",      // GMS sound picker - KEEP
  "CustomizationBundlePrebuiltFullVersion",   // Customization framework - KEEP
