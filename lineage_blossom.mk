@@ -33,8 +33,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 -include vendor/lineage-priv/keys/keys.mk
 
 #Enable Blur
-TARGET_ENABLE_BLUR := false
-TARGET_SUPPORTS_BLUR := false
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_BLUR := true
 
 #Bomb AudioFx
 BOMB_AUDIOFX := true
