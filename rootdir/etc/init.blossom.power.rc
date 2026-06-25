@@ -7,14 +7,7 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us 20000
 
 # SurfaceFlinger background blur configuration
-    exec_background /system/bin/sh -c "
-        memtotal_kb=\$(grep MemTotal /proc/meminfo | awk '{print \$2}')
-        if [ \$memtotal_kb -lt 2097152 ]; then
-            setprop ro.surface_flinger.supports_background_blur 0
-        else
-            setprop ro.surface_flinger.supports_background_blur 1
-        fi
-    "
+exec /system/bin/sh -c 'MemTotal=$(grep "^MemTotal:" /proc/meminfo | awk "{print $2}"); if [ $MemTotal -lt 2097152 ]; then setprop ro.surface_flinger.supports_background_blur 0; else setprop ro.surface_flinger.supports_background_blur 1; fi'
 
 on init
     # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
