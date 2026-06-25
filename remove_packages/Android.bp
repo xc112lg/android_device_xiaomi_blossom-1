@@ -25,7 +25,7 @@ cc_prebuilt_binary {
         "Etar",
         "Flash",
         "Gallery2",
-        "GameSpace",
+//      "GameSpace",
         "GCS",
         "GoogleTTS",
         "Jelly",
