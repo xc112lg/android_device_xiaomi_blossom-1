@@ -211,3 +211,19 @@ include vendor/xiaomi/blossom/BoardConfigVendor.mk
 
 #Miui
 include vendor/xiaomi/miuicamera/SEPolicy.mk
+
+
+# Dolby Atmos Audio
+BOARD_USES_DOLBY_AUDIO := true
+DOLBY_ENABLE := true
+
+# Audio Service
+AUDIO_HAL_SERVICE_BINARY := android.hardware.audio.service.mediatek
+
+# Include media codecs
+PRODUCT_COPY_FILES += \
+    device/xiaomi/blossom/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
+# Include head tracker permission
+PRODUCT_COPY_FILES += \
+    device/xiaomi/blossom/configs/permissions/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml

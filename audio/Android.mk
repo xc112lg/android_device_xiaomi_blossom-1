@@ -35,3 +35,21 @@ LOCAL_SHARED_LIBRARIES := \
     libhardware
 
 include $(BUILD_EXECUTABLE)
+
+# Copy Dolby audio service
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := android.hardware.audio.service.mediatek
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES := proprietary/bin/hw/android.hardware.audio.service.mediatek
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/bin/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmediaplayerservice
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_SRC_FILES := proprietary/lib/libmediaplayerservice.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+include $(BUILD_PREBUILT)

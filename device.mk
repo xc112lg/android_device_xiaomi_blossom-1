@@ -558,3 +558,13 @@ endif
 #Disable Share Connectivity
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.settings.global.shared_connectivity_enabled=0
+
+# Dolby Atmos Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service.mediatek \
+    libmediaplayerservice
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/blossom/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    device/xiaomi/blossom/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    device/xiaomi/blossom/configs/init/mediaextractor.rc:$(TARGET_OUT_ETC)/init/mediaextractor.rc
