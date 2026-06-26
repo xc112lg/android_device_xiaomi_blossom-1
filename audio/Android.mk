@@ -37,7 +37,7 @@ LOCAL_SHARED_LIBRARIES := \
 include $(BUILD_EXECUTABLE)
 
 # Copy Dolby audio service
-LOCAL_PATH := $(call my-dir)
+
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.audio.service.mediatek
