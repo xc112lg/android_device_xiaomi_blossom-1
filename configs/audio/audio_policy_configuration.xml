@@ -102,6 +102,9 @@
                              samplingRates="8000,16000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
+                <mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
+                    <profile name="" format="AUDIO_FORMAT_PCM_FLOAT" samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -281,13 +284,5 @@
     <xi:include href="default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
-
-    <!-- Spatial Audio -->
-
-    <mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
-        <profile name="" format="AUDIO_FORMAT_PCM_FLOAT" samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-    </mixPort>
-
-    <!-- End of Spatial Audio -->
 
 </audioPolicyConfiguration>
