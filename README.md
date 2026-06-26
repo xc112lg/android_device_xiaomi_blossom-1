@@ -9,7 +9,7 @@ Unified device tree for Xiaomi Redmi 9A family devices (blossom)
 #
 ```
 
-## Included devices
+## Included devicess
 
 ### `dandelion`
 
