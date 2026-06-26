@@ -53,6 +53,38 @@ void property_override(string prop, string value)
 
 void vendor_load_properties()
 {
+
+    string hwname = GetProperty("ro.boot.hwname", "");
+
+    // Map ro.boot.hwname to ro.boot.hardware.sku so that SystemConfig can
+    // load the correct per-SKU sysconfig directory at boot
+    // (e.g. /product/etc/sysconfig/sku_dandelion/disable-nfc.xml).
+    //
+    // NFC variants  : angelican
+    // No-NFC variants: dandelion, angelica, angelicain, cattail
+    string sku;
+    if (hwname == "dandelion" || hwname == "dandelion_in" ||
+        hwname == "dandelion_id" || hwname == "dandelion_p") {
+        sku = "dandelion";
+    } else if (hwname == "angelica" || hwname == "angelica_in" ||
+               hwname == "angelica_id" || hwname == "angelica_p") {
+        sku = "angelica";
+    } else if (hwname == "angelicain" || hwname == "angelicain_in") {
+        sku = "angelicain";
+    } else if (hwname == "cattail" || hwname == "cattail_in" ||
+               hwname == "cattail_id" || hwname == "cattail_p") {
+        sku = "cattail";
+    } else if (hwname == "angelican" || hwname == "angelican_in" ||
+               hwname == "angelican_id" || hwname == "angelican_p") {
+        sku = "angelican";  // NFC-capable variant — do NOT disable NFC
+    } else if (!hwname.empty()) {
+        // Unknown variant — use hwname as-is as a safe fallback
+        sku = hwname;
+    }
+
+    if (!sku.empty()) {
+        property_override("ro.boot.hardware.sku", sku);
+    }
     // dalvik heap configuration
     string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;

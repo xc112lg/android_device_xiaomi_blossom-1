@@ -94,6 +94,12 @@
                              samplingRates="8000,16000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
+		<!-- Spatial Audio -->
+		<mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
+		      <profile name="" format="AUDIO_FORMAT_PCM_FLOAT"
+			 samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+		<!-- Spatial Audio -->	
+		 </mixPort>
                 <mixPort name="fast input" role="sink" flags="AUDIO_INPUT_FLAG_FAST" maxOpenCount="1" maxActiveCount="1">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,16000,32000,44100,48000"
@@ -217,13 +223,13 @@
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,deep_buffer,Voice Call In"/>
-                <route type="mix" sink="Speaker"
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
-                <route type="mix" sink="Wired Headset"
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
-                <route type="mix" sink="Wired Headphones"
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In"/>
+                        sources="primary output,deep_buffer,Voice Call In"/>
+                <route type="mix" sink="Speaker" 
+			sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+		<route type="mix" sink="Wired Headset" 
+			sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
+		<route type="mix" sink="Wired Headphones" 
+			sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
                 <route type="mix" sink="AUX Digital Out"
                        sources="primary output"/>
                 <route type="mix" sink="BT SCO"
@@ -250,12 +256,6 @@
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
                 <route type="mix" sink="fast input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Primary In"/>
-                <route type="mix" sink="Speaker" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
-                <route type="mix" sink="Wired Headset" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
-                <route type="mix" sink="Wired Headphones" 
-                       sources="primary output,deep_buffer,FM Tuner In,Voice Call In,immersive_out"/>
             </routes>
 
         </module>
@@ -278,13 +278,5 @@
     <xi:include href="default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
-
-    <!-- Spatial Audio -->
-
-    <mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
-        <profile name="" format="AUDIO_FORMAT_PCM_FLOAT" samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-    </mixPort>
-
-    <!-- End of Spatial Audio -->
 
 </audioPolicyConfiguration>
