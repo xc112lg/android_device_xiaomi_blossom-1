@@ -558,3 +558,16 @@ endif
 #Disable Share Connectivity
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.settings.global.shared_connectivity_enabled=0
+
+# Keylayout for audio jack input device detection
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ACCDET.kl \
+    $(LOCAL_PATH)/configs/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-accdet.kl
+
+# Input device configuration for audio jack
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/ACCDET.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/ACCDET.idc
+
+# Audio HAL service configuration (if not already present)
+# PRODUCT_COPY_FILES += \
+#     device/xiaomi/blossom/audio/android.hardware.audio.service.mediatek.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/android.hardware.audio.service.mediatek.rc

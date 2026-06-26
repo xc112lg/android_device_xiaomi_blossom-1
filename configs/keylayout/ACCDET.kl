@@ -1,0 +1,14 @@
+# Headset/Headphone jack detection keylayout for MediaTek ACCDET
+# This maps hardware events to logical key codes that AudioPolicyService understands
+
+key 226  HEADSETHOOK
+key 227  HEADSETHOOK
+key 240  HEADSETHOOK
+key 241  HEADSETHOOK
+key 242  HEADSETHOOK
+key 243  HEADSETHOOK
+
+# Media control keys that some jacks might send
+key 163  MEDIA_NEXT
+key 165  MEDIA_PREVIOUS  
+key 164  MEDIA_PLAY_PAUSE
