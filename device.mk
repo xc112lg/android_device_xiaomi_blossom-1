@@ -141,6 +141,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Dolby Audio Configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
+# Dolby Spatial Audio Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml
+
+# Media Extractor Service
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init/mediaextractor.rc:$(TARGET_OUT_ETC)/init/mediaextractor.rc
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -558,13 +570,3 @@ endif
 #Disable Share Connectivity
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.settings.global.shared_connectivity_enabled=0
-
-# Dolby Atmos Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service.mediatek \
-    libmediaplayerservice
-
-PRODUCT_COPY_FILES += \
-    device/xiaomi/blossom/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    device/xiaomi/blossom/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
-    device/xiaomi/blossom/configs/init/mediaextractor.rc:$(TARGET_OUT_ETC)/init/mediaextractor.rc
