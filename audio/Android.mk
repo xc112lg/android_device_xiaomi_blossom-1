@@ -8,18 +8,30 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)/init
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
-# Dolby Media Player Service Library
-include $(CLEAR_VARS)
-LOCAL_MODULE := libmediaplayerservice
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_VENDOR_MODULE := true
-LOCAL_MULTILIB := both
-LOCAL_SRC_FILES_64 := proprietary/lib/libmediaplayerservice.so
-LOCAL_SRC_FILES_32 := proprietary/lib/libmediaplayerservice.so
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
-include $(BUILD_PREBUILT)
+LOCAL_PATH := hardware/interfaces/audio/common/all-versions/default/service
 
-# Note: android.hardware.audio.service.mediatek is already defined in 
-# hardware/interfaces/audio/common/all-versions/default/service
-# Do not redefine it here to avoid duplicate module errors
+include $(CLEAR_VARS)
+LOCAL_MODULE := android.hardware.audio.service.mediatek
+LOCAL_REQUIRED_MODULES := android.hardware.audio.service.mediatek.rc
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_VENDOR_MODULE := true
+LOCAL_MULTILIB := 32
+
+LOCAL_SRC_FILES := \
+    service.cpp
+
+LOCAL_CFLAGS := \
+    -Wall \
+    -Wextra \
+    -Werror
+
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libbinder \
+    libbinder_ndk \
+    libhidlbase \
+    liblog \
+    libutils \
+    libhardware
+
+include $(BUILD_EXECUTABLE)
