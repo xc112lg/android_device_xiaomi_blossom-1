@@ -33,8 +33,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 -include vendor/lineage-priv/keys/keys.mk
 
 #Enable Blur
-TARGET_ENABLE_BLUR := false
-TARGET_SUPPORTS_BLUR := false
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_BLUR := true
 
 #Bomb AudioFx
 BOMB_AUDIOFX := true
@@ -47,8 +47,8 @@ PRODUCT_NO_CAMERA := true
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 #Include some stuff
-TARGET_INCLUDE_VIA := false
-TARGET_INCLUDE_REVAMPED := false
+TARGET_INCLUDE_VIA := true
+TARGET_INCLUDE_REVAMPED := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_DOLBY := true
