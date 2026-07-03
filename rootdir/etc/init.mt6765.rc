@@ -693,10 +693,10 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     group system input uhid
     # writepid /dev/cpuset/system-background/tasks
 
-service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
-    class late_start
-    user system
-    group system
+#service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
+#    class late_start
+#    user system
+#    group system
 
 on property:ro.hardware.fp.restartimes=max
     stop vendor.fps_hal

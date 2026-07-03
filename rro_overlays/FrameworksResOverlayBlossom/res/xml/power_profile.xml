@@ -39,11 +39,11 @@
         <value>1050000</value>
         <value>1138000</value>
         <value>1226000</value>
-        <value>13140000</value>
-        <value>14020000</value>
-        <value>14910000</value>
-        <value>15790000</value>
-        <value>16820000</value>
+        <value>13140000</value>    <!-- FIX THIS -->
+        <value>14020000</value>    <!-- FIX THIS -->
+        <value>14910000</value>    <!-- FIX THIS -->
+        <value>15790000</value>    <!-- FIX THIS -->
+        <value>16820000</value>    <!-- FIX THIS -->
         <value>18000000</value>
     </array>
     <array name="cpu.core_power.cluster0">
