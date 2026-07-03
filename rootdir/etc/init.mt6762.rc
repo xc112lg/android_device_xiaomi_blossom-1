@@ -691,15 +691,19 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     class late_start
     user system
     group system input uhid
-    # writepid /dev/cpuset/system-background/tasks
+    max_restart_count 1
+    onrestart setprop vendor.fps.crash_detected 1
 
-#service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
- #   class late_start
- #   user system
- #   group system
+service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
+    class late_start
+    user system
+    group system
+    max_restart_count 1
+    onrestart setprop vendor.fps.crash_detected 1
 
-on property:ro.hardware.fp.restartimes=max
+on property:vendor.fps.crash_detected=1
     stop vendor.fps_hal
+    stop vendor.focaltech.fps_hal
 
 # NFC
 on property:ro.boot.hwname=angelican
