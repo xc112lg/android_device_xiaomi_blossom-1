@@ -570,3 +570,7 @@ endif
 #Disable Share Connectivity
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.settings.global.shared_connectivity_enabled=0
+
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    config.disable_sharedconnectivity=true
