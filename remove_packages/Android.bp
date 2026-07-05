@@ -8,7 +8,7 @@ cc_prebuilt_binary {
         "AndroidAutoStubPrebuilt",
         "arcore",
         "AudioFX",
-    /   "AxSandbox",
+    //   "AxSandbox",
         "Calendar",
         "Calendar2",
         "Camera2",
