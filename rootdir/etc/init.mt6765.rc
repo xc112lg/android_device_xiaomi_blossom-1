@@ -699,10 +699,11 @@ service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0
     user system
     group system
     max_restart_count 1
+    disabled
     onrestart setprop vendor.fps.crash_detected 1
 
 on property:vendor.fps.crash_detected=1
-    stop vendor.fps_hal
+ #    stop vendor.fps_hal
  #   stop vendor.focaltech.fps_hal
 
 # NFC
