@@ -703,7 +703,7 @@ service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0
 
 on property:vendor.fps.crash_detected=1
     stop vendor.fps_hal
-    stop vendor.focaltech.fps_hal
+ #   stop vendor.focaltech.fps_hal
 
 # NFC
 on property:ro.boot.hwname=angelican
